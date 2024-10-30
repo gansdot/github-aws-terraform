@@ -22,3 +22,5 @@ resource "aws_instance" "example_server" {
     Name = "terraform-poc"
   }
 }
+
+#dummy comment
