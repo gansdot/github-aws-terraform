@@ -4,7 +4,7 @@ resource "aws_instance" "ec2-terra" {
   instance_type               = "t2.micro"
   availability_zone           = "us-east-2"
   subnet_id                   = aws_subnet.pub-sub-terra.id
-  vpc_security_group_ids      = ["${aws_security_group.sg-terra.id}"]
+  vpc_security_group_ids      = aws_security_group.sg-terra.id
   associate_public_ip_address = true
 
   tags = {
