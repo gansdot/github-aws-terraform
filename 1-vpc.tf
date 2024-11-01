@@ -10,7 +10,7 @@ resource "aws_vpc" "vpc-terra" {
 
 resource "aws_flow_log" "log_terra" {
   log_destination = "arn:aws:s3:::my-local-lp-store-terra/*"
-  log_destination_type = "cloud-watch-logs"
+  log_destination_type = "s3"
   traffic_type         = "ALL"
   vpc_id               = aws_vpc.vpc-terra.id
 
