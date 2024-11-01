@@ -4,6 +4,7 @@ resource "aws_security_group" "sg-terra" {
   vpc_id      = aws_vpc.vpc-terra.id
 
   ingress {
+    description = "Allow inbound HTTP traffic"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
@@ -11,6 +12,7 @@ resource "aws_security_group" "sg-terra" {
   }
 
   egress {
+    description = "Allow outbound HTTP traffic"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
