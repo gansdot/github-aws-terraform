@@ -16,6 +16,6 @@ resource "aws_instance" "ec2-terra" {
 
   tags = {
     Name = "ec2-terra"
-    Env  = "Testing"
+    Env  = "Development"
   }
 }
